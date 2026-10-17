@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Capital App - ADE SUPRIATNA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{background:#f5f5f5;font-family:'Segoe UI',sans-serif}
+.card-red{background:linear-gradient(135deg,#8B0000 0%,#D40000 50%,#FF4500 100%); position:relative; overflow:hidden;}
+.card-red::after{content:'';position:absolute;right:-30px;top:-40px;width:200px;height:200px;background:rgba(255,255,255,0.1);border-radius:50%}
+.menu-card{background:#fff; border-radius:16px; box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.app-icon{width:78px;height:78px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:28px; box-shadow:0 4px 10px rgba(0,0,0,0.15)}
+.hide{display:none}
+.tab-active{background:#D40000;color:white !important}
+</style>
+</head>
+<body class="max-w-[480px] mx-auto bg-white min-h-screen pb-20">
+
+<!-- HEADER -->
+<div id="page-home">
+<div class="px-4 py-4 flex justify-between items-center">
+<h1 class="font-bold text-[22px] text-[#333]">Human Capital Application</h1>
+<button class="w-12 h-12 bg-[#0A4DA1] rounded-full flex items-center justify-center text-white text-xl"><i class="fa-solid fa-right-from-bracket"></i></button>
+</div>
+
+<!-- CARD PROFILE UTAMA -->
+<div class="mx-4 card-red rounded-[28px] p-6 h-[280px] flex flex-col justify-between text-white relative">
+<div class="z-10">
+<h2 class="font-black text-[26px] leading-tight">ADE SUPRIATNA</h2>
+</div>
+<div class="z-10 mt-auto">
+<p class="text-[22px] tracking-widest">18074166</p>
+<p class="text-[24px] font-bold mt-1">SAT</p>
+</div>
+<img src="https://i.ibb.co/0jq1Lz9/city.png" class="absolute bottom-0 right-0 w-[85%] opacity-90 pointer-events-none" style="mix-blend-mode:overlay">
+<div class="absolute right-10 bottom-10 w-32 h-40 bg-white/20 rounded-t-full blur-[1px]"></div>
+<div class="absolute right-0 top-10 w-40 h-40 bg-yellow-500/30 rounded-full"></div>
+</div>
+
+<!-- MENU -->
+<div class="px-4 mt-6">
+<h3 class="font-bold text-[18px] mb-3">Menu</h3>
+
+<div class="menu-card p-4 flex gap-4 items-center mb-4" onclick="showPage('presensi')">
+<img src="https://cdn-icons-png.flaticon.com/512/3176/3176298.png" class="w-16 h-16">
+<div>
+<h4 class="font-black text-[18px]">PRESENSI</h4>
+<p class="text-[13px] text-gray-600">Detail Absensi, History & Rekap Presensi</p>
+</div>
+</div>
+
+<div class="menu-card p-4 flex gap-4 items-center mb-4">
+<img src="https://cdn-icons-png.flaticon.com/512/2972/2972306.png" class="w-16 h-16">
+<div>
+<h4 class="font-black text-[16px]">LOGIN WITH QRCODE</h4>
+<p class="text-[13px] text-gray-600">Login SSO Web via Scan QRCode</p>
+</div>
+</div>
+
+<div class="menu-card p-4 flex gap-4 items-center" onclick="showPage('intranet')">
+<img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="w-16 h-16">
+<div>
+<h4 class="font-black text-[16px]">APP INTRANET</h4>
+<p class="text-[13px] text-gray-600">List Website Intranet</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PAGE INTRANET / APP GRID -->
+<div id="page-intranet" class="hide">
+<div class="p-3">
+<div class="flex gap-2 bg-white p-2 rounded-xl shadow">
+<input placeholder="Cari aplikasi" class="flex-1 outline-none px-2 text-[18px]">
+<button class="border-l px-4"><i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+<div class="card-red h-[140px] rounded-2xl mt-3"></div>
+
+<div class="grid grid-cols-3 gap-4 mt-6 text-center">
+<div><div class="app-icon bg-red-600 mx-auto">AMC</div><p class="text-[13px] mt-1 leading-tight">Alfa Mind Care</p></div>
+<div><div class="app-icon bg-red-600 mx-auto">ATO</div><p class="text-[13px] mt-1 leading-tight">Attendance Online</p></div>
+<div><div class="app-icon bg-[#E74C3C] mx-auto"><i class="fa-solid fa-barcode text-3xl"></i></div><p class="text-[13px] mt-1">Barcode NIK</p></div>
+
+<div><div class="app-icon bg-red-600 mx-auto">ADCB</div><p class="text-[12px] mt-1 leading-tight">Approval Data... Compensatic & Benefit</p></div>
+<div><div class="app-icon bg-red-700 mx-auto">DSO</div><p class="text-[13px] mt-1 leading-tight">Digital Sign Operation</p></div>
+<div><div class="app-icon bg-[#1A5276] mx-auto">EP</div><p class="text-[13px] mt-1">Employee Profile</p></div>
+
+<div><div class="app-icon bg-red-600 mx-auto">FAO</div><p class="text-[13px] mt-1 leading-tight">Franchise Approval... Online</p></div>
+<div><div class="app-icon bg-red-600 mx-auto">DSA</div><p class="text-[12px] mt-1">HC Digital Sign</p></div>
+<div><div class="app-icon bg-yellow-500 mx-auto">OSQR</div><p class="text-[13px] mt-1">[SAT] Oneshot-QR</p></div>
+</div>
+
+<div class="grid grid-cols-3 gap-4 mt-8 text-center">
+<div><div class="app-icon bg-white border mx-auto text-blue-600"><i class="fa-solid fa-lock"></i></div><p class="text-[13px] mt-1">OTP Online</p></div>
+<div><div class="app-icon bg-white mx-auto"><i class="fa-solid fa-truck text-red-600"></i></div><p class="text-[13px] mt-1 leading-tight">Pickup Sales Mobile</p></div>
+<div><div class="app-icon bg-white mx-auto"><i class="fa-solid fa-store text-red-600"></i></div><p class="text-[13px] mt-1">SO KWH</p></div>
+<div><div class="app-icon bg-white mx-auto text-red-600">STO</div><p class="text-[13px] mt-1 leading-tight">Sosialisasi & Test Online</p></div>
+<div><div class="app-icon bg-white mx-auto">SOPHIA</div><p class="text-[13px] mt-1">SOPHIA</p></div>
+<div><div class="app-icon bg-white mx-auto text-black">TM</div><p class="text-[13px] mt-1 leading-tight">Time Management</p></div>
+</div>
+</div>
+</div>
+
+<!-- PAGE PROFILE -->
+<div id="page-profile" class="hide bg-[#E9E9E9] min-h-screen">
+<div class="bg-white p-3 sticky top-0 z-20">
+<div class="flex justify-end">
+<div class="bg-[#C30027] text-white rounded-full flex items-center overflow-hidden">
+<span class="px-4 py-2 text-[16px]"><i class="fa-solid fa-user"></i> 18074166 • KF33</span>
+<span class="border-l border-white/30 px-4 py-2"><i class="fa-solid fa-right-from-bracket"></i> Log Out</span>
+</div>
+</div>
+<div class="flex gap-2 mt-3 overflow-x-auto">
+<button class="tab-active whitespace-nowrap px-5 py-2 rounded-full text-sm"><i class="fa-solid fa-user"></i> Profile</button>
+<button class="bg-white whitespace-nowrap px-5 py-2 rounded-full text-sm" onclick="showPage('history')">History Karyawan</button>
+<button class="bg-white whitespace-nowrap px-5 py-2 rounded-full text-sm">Menu Atasan</button>
+</div>
+</div>
+
+<div class="m-3 bg-[#8B0000] rounded-xl p-3 flex gap-3 items-center text-white relative overflow-hidden">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="w-20 h-20 bg-white rounded-full">
+<div>
+<h3 class="font-black text-[15px] bg-black/60 px-2 rounded">18074166 - ADE SUPRIATNA</h3>
+<div class="bg-white text-black rounded-full px-4 py-1 mt-2 text-sm">Vaksinasi Covid-19 <i class="fa-regular fa-eye"></i></div>
+</div>
+</div>
+
+<div class="p-3 space-y-3">
+<details class="bg-white rounded-xl p-4"><summary class="list-none flex justify-between font-medium">Profile <i class="fa-solid fa-chevron-down"></i></summary>
+<div class="mt-4 text-[13px] space-y-2">
+<div class="flex"><span class="w-40">NIK</span>: 18074166</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-40">NAMA</span>: ADE SUPRIATNA</div>
+<div class="flex"><span class="w-40">KODE PELAMAR</span>: 1558047</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-40">TANGGAL MELAMAR</span>: 09-06-2018</div>
+<div class="flex"><span class="w-40">MULAI KERJA</span>: 18-07-2018</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-40">KELUAR KERJA</span>: -</div>
+<div class="flex"><span class="w-40">TEMPAT LAHIR</span>: BOGOR</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-40">TANGGAL LAHIR</span>: 24-Apr-1999</div>
+<div class="flex"><span class="w-40">WARGA NEGARA</span>: INDONESIA</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-40">ALAMAT SEKARANG</span>: KP. SETU TENGAH, RT/RW 004/003, KEL. SINARSARI, KEC. DRAMAGA, KAB. BOGOR, JAWA BARAT</div>
+</div>
+</details>
+<details class="bg-white rounded-xl p-4"><summary class="list-none flex justify-between">Profil Vaksinasi <i class="fa-solid fa-chevron-down"></i></summary></details>
+<details class="bg-white rounded-xl p-4"><summary class="list-none flex justify-between">BPJS Kesehatan <i class="fa-solid fa-chevron-down"></i></summary></details>
+<details class="bg-white rounded-xl p-4"><summary class="list-none flex justify-between">Kompetensi Jabatan <i class="fa-solid fa-chevron-down"></i></summary></details>
+</div>
+</div>
+
+<!-- PAGE HISTORY -->
+<div id="page-history" class="hide bg-[#E9E9E9] min-h-screen">
+<div class="bg-white p-3">
+<div class="flex gap-2 overflow-x-auto">
+<button class="bg-white px-4 py-2 rounded-full text-sm" onclick="showPage('profile')">Profile</button>
+<button class="tab-active px-4 py-2 rounded-full text-sm"><i class="fa-solid fa-clock-rotate-left"></i> History Karyawan</button>
+<button class="bg-white px-4 py-2 rounded-full text-sm">Menu Atasan</button>
+</div>
+</div>
+<div class="m-3 bg-[#E3ECFF] rounded-xl p-4 flex justify-between text-[#0A4DA1] font-medium">Data Karyawan <i class="fa-solid fa-chevron-up"></i></div>
+<div class="bg-white m-3 rounded-xl p-4 text-[13px] space-y-3">
+<div class="flex"><span class="w-32">Jabatan</span>: O1227 - Chief Of Store</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-32">Branch</span>: Branch Cikokol</div>
+<div class="flex"><span class="w-32">Home Base</span>: KZ01</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-32">Branch Placement</span>: Branch Cikokol</div>
+<div class="flex"><span class="w-32">Divisi</span>: Operation</div>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-32">Departemen</span>: AREA</div>
+<div class="flex"><span class="w-32">Grade</span>: 7</div>
+<h4 class="font-bold underline mt-4">Lama Menjabat</h4>
+<div class="flex bg-[#EEF2FF] p-2"><span class="w-32">- Jabatan Terakhir</span>: Keseluruhan NIK : 0 Tahun 1 Bulan 21 Hari</div>
+<div class="flex"><span class="w-32"></span>: NIK Terakhir: 0 Tahun 1 Bulan 21 Hari</div>
+</div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="fixed bottom-0 max-w-[480px] w-full bg-white border-t flex justify-around py-3 text-gray-600 text-xl">
+<button onclick="showPage('home')"><i class="fa-solid fa-angles-left"></i></button>
+<button onclick="showPage('home')"><i class="fa-solid fa-house"></i></button>
+</div>
+
+<script>
+function showPage(p){
+document.querySelectorAll('[id^=page-]').forEach(e=>e.classList.add('hide'));
+document.getElementById('page-'+p).classList.remove('hide');
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
